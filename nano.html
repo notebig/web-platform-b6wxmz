@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link href="https://unpkg.com/nanogallery2@2.2.0/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://unpkg.com/nanogallery2@2.2.0/dist/jquery.nanogallery2.min.js"></script>
+
+  </head>
+  <body>
+
+    <h1>gallery made with nanogallery2</h1>
+
+    <div id="nanogallery2" data-nanogallery2='{
+        "thumbnailHeight": 210, "thumbnailWidth": 210,
+        "itemsBaseURL": "./img/banner1/"
+      }'>
+      
+      <!-- FIRST ALBUM -->
+      <a href="" data-ngkind="album" data-ngid="1"  data-ngthumb="glass1.jpg">Album A</a>
+      <a href="glass1.jpg"          data-ngid="10" data-ngalbumid="1" data-ngthumb="glass1.jpg">Image A1</a>
+      <a href="glass2.jpg"          data-ngid="11" data-ngalbumid="1" data-ngthumb="glass2.jpg">Image A2</a>
+      
+      <!-- SECOND ALBUM -->
+      <a href="" data-ngkind="album" data-ngid="2"  data-ngthumb="berlin2t">Album B</a>
+      <a href="berlin2.jpg"          data-ngid="20" data-ngalbumid="2" data-ngthumb="berlin2_t.jpg">Image B1</a>
+      <a href="berlin2.jpg"          data-ngid="21" data-ngalbumid="2" data-ngthumb="berlin2_t.jpg">Image B2</a>
+    </div>
+  </body>
+</html>
