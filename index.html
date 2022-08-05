@@ -1,42 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<? include 'head.inc'  ?>
+  <link rel="shortcut icon" href="favicon.ico"/>
+  <title>The Pro's Choice 3M Car Care</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/style2020.css">
+    <link rel="stylesheet" href="style/css2023.css">
+ 
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-66646481-1', 'auto');
+    ga('send', 'pageview');
 
+    function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+  
+</script>
 </head>
 <body>
 
 <!-- Navbar -->
-<?
-include 'navi.php';
+<div class="w3-top">
 
-?>
+  <div w3-include-html="mainMenu.html"></div> 
+
+
+
+
+  <!-- drop mobi-->
+  <div class="topbarGV" > </div>
+</div>
+
+<!-- Navbar on small screens -->
+
+<div w3-include-html="smallMenu.html"></div> 
+
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:1280px; margin-top:46px; margin-bottom: 46px;" id="contentMain">
+<div class="w3-content" id="contentMain">
 
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="img/banner1/glass2.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3> </h3>
-      <p><b> </b></p>   
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="img/banner1/p3.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3> </h3>
-      <p><b> </b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="img/banner1/shop.jpg"  style="width:100%; ">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3> </h3>
-      <p><b> </b></p>    
-    </div>
-  </div>
+ 
 
 
  <!-- about
@@ -45,14 +82,13 @@ include 'navi.php';
 
 
  -->
-   <?
-   include'about.inc'
-?>
+ <!-- Project Section -->
  
 
 
+
 <!--   SERVICE LINK  -->
-  <div class="w3-container w3-padding-32"   >
+  <div class=" w3-container w3-padding-32" id="contentBox"  >
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"  >3M Service Guide </h3>  
     
 
@@ -202,32 +238,7 @@ include 'navi.php';
 
 
 <!-- About Sectionw3-half w3-container -->
-  <div class="w3-half  w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">เกี่ยวกับเรา</h3>สวัสดี ท่านผู้รักการดูแลรถยนต์ ณ ย่านราชพฤกษ์เราคือร้านคาร์แคร์ ชื่อร้าน 3M Car Care The Pro's Choice เผือท่านใดกำลังมองหาร้านล้างรถในใจเพิ่มอีกสักร้าน ร้านเราเปิดบริการ 8.00น. - 19.00 น ทุกวัน ไม่มีวันหยุดครับ ที่ตั้งของเราอยู่ที่ ปั๊ม SUSCO สาขาราชพฤกษ์ ถนนราชพฤกษ์ ตรงข้าม เดอะเซอเคิล ตลิ่งชัน กทม.
-
-    
-  </div>
-
-
-  <div class="w3-half  w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">สิ่งอำนวยความสะดวก</h3>
-
-    จุดนี้มีสิ่งอำนวยความสะดวกครบครัน เช่น
-
-super maket (get it ตั้งฮั่วเส็ง)
-ร้านกาแฟ
-ร้านอาหาร (ตำเบรกแตก)
-ATM (เบิก/ฝาก/โอน)
-ปะยาง (เติมลมยางไนโตรเจน)
-ร้านนวด (นวดแผนไทย Nura)
-อาบน้ำ/ตัดข่นสุนัข
-ห้องรับรองแอร์เย็นๆ
-free wi-fi
-"ผลิตภัณฑ์ที่เราใช้ เป็นของ 3M เต็มระบบ" ไล่ตั้งแต่ โฟมล้างรถ น้ำยาทายาง ยันแว็กซ์เคลือบเงา เคลือบแก้วเลย และยังมีผลิตภัณฑ์ต่างๆของ 3M ในกลุ่ม Auto Care Products จำหน่ายด้วย
-
-และที่สำคัญ "ผมอยู่ดูแลร้านเองทุกวันครับ เพื่อควบคุมคุณภาพของงาน ให้เป็นที่พึ่งพอใจของลูกค้าที่สุดครับ"
-   
-  </div>
+  
 
   
 
@@ -236,12 +247,16 @@ free wi-fi
 
 </div>
 
-
-<!-- End Page Content -->
 </div>
+<!-- End Page Content -->
+  <div w3-include-html="subend.html">  
+     </div> 
 
-<!-- Google Map -->
-<div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
+
+
+
+
+ 
 <!-- Footer --><div class="topbarGV" style="height: 8px;" > </div>
 
 <footer class="w3-center w3-black w3-padding-16">
@@ -261,43 +276,7 @@ free wi-fi
 </footer>
 
 
-<!-- Add Google Maps -->
-<script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(13.762245460184232, 100.44602769682999);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHHx0BL2GBpFaX-KxI2rhZBzfzKZdvMik&callback=myMap"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 <script>
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
@@ -333,6 +312,8 @@ window.onclick = function(event) {
   }
 }
 </script>
-
+<script>
+includeHTML();
+</script>
 </body>
 </html>
